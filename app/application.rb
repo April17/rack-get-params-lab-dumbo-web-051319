@@ -42,7 +42,7 @@ class Application
       @@cart << add_term
       return "#{add_term} is one of our items"
     else
-      return "Couldn't find #{add_term}"
+      return "We don't have that item"
     end
   end
 
@@ -50,7 +50,7 @@ class Application
     if @@items.include?(search_term)
       return "#{search_term} is one of our items"
     else
-      return "We don't have that item"
+      return "Couldn't find #{search_term}"
     end
   end
 end
