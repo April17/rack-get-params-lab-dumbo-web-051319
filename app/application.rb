@@ -36,9 +36,6 @@ class Application
     resp.finish
   end
 
-  def cart_item
-
-  end
 
   def handle_add(add_term)
     if @@items.include?(add_term)
