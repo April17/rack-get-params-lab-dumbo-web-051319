@@ -40,7 +40,7 @@ class Application
   def handle_add(add_term)
     if @@items.include?(add_term)
       @@cart << add_term
-      # return "#{add_term} is one of our items"
+      return "#{add_term} is one of our items"
     else
       return "We don't have that item"
     end
