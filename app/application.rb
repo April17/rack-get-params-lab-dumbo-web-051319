@@ -31,11 +31,12 @@ class Application
 
     resp.finish
   end
-  def handle_add(search_term)
-    if @@items.include?(search_term)
-      return "#{search_term} is one of our items"
+  def handle_add(add_term)
+    if @@items.include?(add_term)
+      @@cart << add_term
+      return "#{add_term} is one of our items"
     else
-      return "Couldn't find #{search_term}"
+      return "Couldn't find #{add_term}"
     end
   end
   def handle_search(search_term)
