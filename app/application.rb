@@ -32,7 +32,7 @@ class Application
 
   def cart_item
     if @@cart == []
-      return "Your cart is empty"
+      resp.write "Your cart is empty"
     else
       @@cart.each do |item|
         resp.write "#{item}\n"
