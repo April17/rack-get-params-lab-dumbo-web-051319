@@ -13,7 +13,7 @@ class Application
       end
 
     elsif req.path.match(/cart/)
-      cart_item
+      resp.write cart_item
 
     elsif req.path.match(/search/)
       search_term = req.params["q"]
@@ -32,7 +32,7 @@ class Application
 
   def cart_item
     if @@cart == []
-      resp.write "Your cart is empty"
+      return "Your cart is empty"
     else
       @@cart.each do |item|
         resp.write "#{item}\n"
