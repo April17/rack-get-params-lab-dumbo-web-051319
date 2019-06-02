@@ -13,7 +13,7 @@ class Application
       end
 
     elsif req.path.match(/cart/)
-      resp.write cart_item
+      cart_item
 
     elsif req.path.match(/search/)
       search_term = req.params["q"]
